@@ -74,7 +74,7 @@ const fn problookup() -> [NonZeroU8; 65536] {
 static PROB_LOOKUP: [NonZeroU8; 65536] = problookup();
 
 impl VP8Context {
-    pub fn new() -> Self {
+    pub const fn new() -> Self {
         Self { counts: 0x0101 }
     }
 
